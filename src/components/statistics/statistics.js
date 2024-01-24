@@ -3,7 +3,7 @@ import css from './statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className={css.Statistics}>
+    <section className={css.statistics}>
       {title && <h2 className={css.title}>{title.tuUpperCase()}</h2>}
       <ul className={css.statList}>
         {stats.map(stat => (
