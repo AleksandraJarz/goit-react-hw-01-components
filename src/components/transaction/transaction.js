@@ -3,7 +3,7 @@ import css from './transaction.module.css';
 
 const Transaction = ({ items }) => {
   return (
-    <table className={css.transactio}>
+    <table className={css.transaction}>
       <thead>
         <tr>
           <th>Type</th>

@@ -4,13 +4,13 @@ import css from './statistics.module.css';
 const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      {title && <h2 className={css.title}>{title.tuUpperCase()}</h2>}
+      {title && <h2 className={css.title}>{title.toUpperCase()}</h2>}
       <ul className={css.statList}>
         {stats.map(stat => (
           <li
             key={stat.id}
             className={css.item}
-            style={{ backgroundColor: 'rgba(0, 230, 120,${stat.percentage}%)' }}
+            style={{ backgroundColor: `rgba(250,50,140,${stat.percentage}%)` }}
           >
             <span className={css.label}>{stat.label}</span>
             <span className={css.percentage}>{stat.percentage}%</span>
@@ -21,7 +21,7 @@ const Statistics = ({ title, stats }) => {
   );
 };
 
-Statistics.PropTypes = {
+Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.object.isRequired,
 };
